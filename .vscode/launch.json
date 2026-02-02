@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/robothg/Desktop/Leipzig/Lecture_ThirdYear/Concurrency/code/welcome_c-",
-      "program": "/home/robothg/Desktop/Leipzig/Lecture_ThirdYear/Concurrency/code/welcome_c-/build/Debug/outDebug",
+      "cwd": "/home/robothg/Desktop/Leipzig/Lecture_ThirdYear/Concurrency/code/welcome_c-/hello_c++/semaphores",
+      "program": "/home/robothg/Desktop/Leipzig/Lecture_ThirdYear/Concurrency/code/welcome_c-/hello_c++/semaphores/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

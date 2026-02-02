@@ -25,7 +25,7 @@ class ThreadHello {
     void printResult(){
         std::lock_guard  <std::mutex> lock(createLock);
         std::this_thread::sleep_for(std::chrono::seconds(2));
-        std::cout << "Hello thread " << getpid() << "\n";;
+        std::cout << "Hello thread " << getpid() << "\n";
     }
 
 
