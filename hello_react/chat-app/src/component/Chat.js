@@ -8,8 +8,8 @@ const Chat = () => {
   const stompClientRef = useRef(null);
 
   useEffect(() => {
-   // const socket = new SockJS("http://localhost:8080/ws");
-    const socket = new SockJS("http://chattest-env.eba-jraj8msr.eu-north-1.elasticbeanstalk.com/ws");
+    const socket = new SockJS("http://localhost:5000/ws");
+   // const socket = new SockJS("http://chattest-env.eba-jraj8msr.eu-north-1.elasticbeanstalk.com/ws");
     const client = new Client({
       webSocketFactory: () => socket,
       reconnectDelay: 5000,
@@ -19,7 +19,7 @@ const Chat = () => {
           const payload = JSON.parse(message.body);
           setMessages((prev) => [...prev, payload]);
         });
-      },
+      },    
       onStompError: (frame) => {
         console.error("Broker error:", frame.headers["message"]);
       },

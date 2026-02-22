@@ -33,11 +33,10 @@ odd_event (val)= if val `mod` 2 == 0
                   y = "odd"
 
 -- recursevely sum three
-
-
 sumThreeRec :: Int -> Int 
 sumThreeRec (x) =  x + kn
                 where kn = 3
+
 
 
 

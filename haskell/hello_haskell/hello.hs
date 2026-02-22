@@ -15,9 +15,8 @@ oddEven v(value) =
     if value `mod` 2 == 0
         then evenStr
         else oddStr
-    where
-    evenStr = "even"
-    oddStr  = "odd"
+    where evenStr = "even"
+          oddStr  = "odd"
 
 min_max :: [Int] -> Int
 min_max ([a]) = max([a])
