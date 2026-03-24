@@ -27,8 +27,8 @@
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: g++-14 build active file",
-            "command": "/usr/bin/g++-14",
+            "label": "C/C++: g++-20 build active file",
+            "command": "/usr/bin/g++-20",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",

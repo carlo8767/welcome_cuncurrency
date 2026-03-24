@@ -5,8 +5,6 @@
 class OrderMattersThread{
 // VERIFY IF I CAN FLAG THE SEMAPHORE TO 0 AND ANFTER INCREASE
 
-
-
    std:: binary_semaphore simpleT1 {0};
    std:: binary_semaphore simpleT2 {0};
 

@@ -80,3 +80,11 @@ mapAddList y xs = map(\x-> x+y)xs
 filterList p (x:xs)  
             | p (x) =  x : filter p xs
             | otherwise = filter p xs
+
+
+-- PARTIAL APPLICATIONS->
+addPartial :: (\x->) (y-> x + y))-> X
+addPartial x =  addPartial x
+
+
+

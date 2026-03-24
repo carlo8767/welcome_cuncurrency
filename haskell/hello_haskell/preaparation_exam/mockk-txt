@@ -1,0 +1,118 @@
+-- Advanced Haskell Programming Exam – 50 Minutes
+
+---
+
+## Task 1 – Function Analysis (10 Marks)
+
+Each question is worth 2 marks. Select Yes or No by deleting the incorrect answer.
+
+1. Is the following function total?
+
+```haskell
+f :: Int -> Int
+f x
+  | x > 0     = x * 2
+  | otherwise = error "negative not allowed"
+```
+
+Answer: Yes
+
+2. Is the following function tail recursive?
+
+```haskell
+sumSquares :: [Int] -> Int
+sumSquares []     = 0
+sumSquares (x:xs) = x^2 + sumSquares xs
+```
+
+Answer: No
+
+3. Consider the type:
+
+```haskell
+data Shape = Circle Float | Rectangle Float Float
+  deriving (Show)
+```
+
+Is this type recursive?
+Answer:  No
+
+4. Is the above type polymorphic?
+   Answer: No
+
+5. Consider:
+
+```haskell
+let a = Circle 1.0
+let b = Rectangle 1.0 2.0
+```
+
+Would the expression `a == b` compile?
+Answer: No
+
+---
+
+## Task 2 – Habit Tracker Functions (15 Marks)
+
+We track habits with frequency and unit:
+
+```haskell
+data Unit = Daily | Weekly | Monthly
+  deriving (Show)
+
+convUnit :: Unit -> Float
+convUnit Daily   = 1.0
+convUnit Weekly  = 1/7
+convUnit Monthly = 1/30
+
+habits :: [(Float, Unit)]
+habits = [(1.0, Daily), (2.0, Weekly), (3.0, Monthly)]
+```
+
+Goal: Write functions that convert `habits` into daily frequencies `r * convUnit u`.
+
+1. recFreq – use simple recursion [2 marks]
+2. tailFreq – use tail recursion [3 marks]
+3. mapFreq – use map [1 mark]
+4. foldrFreq – use foldr [2 marks]
+5. foldlFreq – use foldl [2 marks]
+6. comprFreq – use list comprehension [1 mark]
+
+> All functions must have the same type. Provide the type signature for at least one. [2 marks]
+
+---
+
+## Task 3 – Advanced Habit Computation (15 Marks)
+
+The list `habit_log` contains performed counts:
+
+```haskell
+habit_log :: [Float]
+habit_log = [10, 1, 0]
+```
+
+1. Expected habits [2 marks]
+   Write a function `expectedHabits :: Float -> [Float]` that calculates how many times each habit should have been completed after `n` days.
+
+2. Off track [5 marks]
+   Write a function `offTrack :: Float -> [Bool]` that returns `True` for habits where the performed count is less than expected. Use a `where` clause.
+
+3. Penalty [8 marks]
+   Write a function `penalty :: Float -> Float` that computes the total penalty owed. Each off-track habit incurs €5.
+
+---
+
+## Task 4 – Higher-Order Function Challenge (10 Marks)
+
+1. Implement `applyNTimes :: Int -> (a -> a) -> a -> a` [5 marks]
+   Applies a function `n` times to a value.
+
+2. Implement `allPairs :: [a] -> [b] -> [(a,b)]` using `concatMap` [5 marks]
+
+---
+
+### Instructions
+
+* Include type signatures for all top-level functions.
+* Name your functions exactly as specified.
+* Total marks: 50

@@ -25,3 +25,5 @@ min_max ([a]) = max([a])
 
 listLength :: [Int] -> Int
 listLength ([a]) = length([a])
+
+

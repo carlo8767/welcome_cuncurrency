@@ -1,6 +1,8 @@
 {
     "version": "0.2.0",
     "configurations": [
+
+
         {
             "name": "C/C++ Runner: Debug Session",
             "type": "cppdbg",
@@ -47,14 +49,14 @@
             "miDebuggerPath": "/usr/bin/gdb"
         },
         {
-            "name": "C/C++: g++-14 build and debug active file",
+            "name": "C/C++: g++-20 build and debug active file",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
-            "environment": [],
+            "environment": [{"value": "Debug"}],
             "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
@@ -69,7 +71,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++-14 build active file",
+            "preLaunchTask": "C/C++: g++-20 build active file",
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
